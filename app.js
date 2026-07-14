@@ -38,6 +38,11 @@ app.post("/add-nss",async(req,res)=>{
     res.json({"status":"success"})
 })
 
+app.post("/view-nss",async(req,res)=>{
+    const nsst=await nss.find()
+    res.json(nsst)
+})
+
 
 
 app.listen(2000,()=>{
